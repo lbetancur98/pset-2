@@ -60,7 +60,24 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
+        System.out.print("Enter a dollar amount: ");
+        double amountMoney = in.nextDouble();
+        in.nextLine();
 
+        double dollarValue = 1.00;
+        double quarterValue = .25;
+        double dimeValue = .10;
+        double nickleValue = .05;
+        
+        double dollarAmount = Math.floor(amountMoney / dollarValue);
+
+        amountMoney = amountMoney - (dollarAmount * dollarValue);
+
+        System.out.printf("DOLLARS:    %.0f\n", dollarAmount );
+        
+        System.out.println(amountMoney);
+        
+        // in progress
 
         /*
          * Exercise 3.
