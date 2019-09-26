@@ -106,16 +106,13 @@ public class ProblemSet2 {
 
         
         System.out.print("Enter a dollar amount: ");
-        double amountMoney = in.nextDouble() * 100;
+        amountMoney = in.nextDouble() * 100;
         in.nextLine();
 
         
         double tenDollarValue = 1000;
         double fiveDollarValue = 500;
-        double dollarValue = 100;
-        double quarterValue = 25;
-        double dimeValue = 10;
-        double nickelValue = 5;
+        
 
         double tenDollarAmount = Math.floor(amountMoney / tenDollarValue);
         amountMoney = amountMoney - (tenDollarAmount * tenDollarValue);
@@ -123,16 +120,16 @@ public class ProblemSet2 {
         double fiveDollarAmount = Math.floor(amountMoney / fiveDollarValue);
         amountMoney = amountMoney - (fiveDollarAmount * fiveDollarValue);
         
-        double dollarAmount = Math.floor(amountMoney / dollarValue);
+        dollarAmount = Math.floor(amountMoney / dollarValue);
         amountMoney = amountMoney - (dollarAmount * dollarValue);
 
-        double quarterAmount = Math.floor(amountMoney / quarterValue);
+        quarterAmount = Math.floor(amountMoney / quarterValue);
         amountMoney = amountMoney - (quarterAmount * quarterValue);
 
-        double dimeAmount = Math.floor(amountMoney / dimeValue);
+        dimeAmount = Math.floor(amountMoney / dimeValue);
         amountMoney = amountMoney - (dimeAmount * dimeValue);
 
-        double nickelAmount = Math.floor(amountMoney / nickelValue);
+        nickelAmount = Math.floor(amountMoney / nickelValue);
         amountMoney = amountMoney - (nickelAmount * nickelValue);
 
 
@@ -178,7 +175,22 @@ public class ProblemSet2 {
          * meters, and centimeters.
          */
         
+        System.out.print("Enter a number of centimeters: ");
+        double amountCentimeters = in.nextDouble() ;
+        in.nextLine();
 
+        double kilometerValue = 100000;
+        double meterValue = 100;
+
+        double kilometerAmount = Math.floor(amountCentimeters / kilometerValue);
+        amountCentimeters = amountCentimeters - (kilometerAmount * kilometerValue);
+
+        double meterAmount = Math.floor(amountCentimeters / meterValue);
+        amountCentimeters = amountCentimeters - (meterAmount * meterValue);
+
+        System.out.printf("KILOMETERS  : %.0f\n", kilometerAmount );
+        System.out.printf("METER       : %.0f\n", meterAmount);
+        System.out.printf("CENTIMETERS : %.0f\n", amountCentimeters);
         
         /*
          * Exercise 6.
@@ -186,7 +198,7 @@ public class ProblemSet2 {
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
         
-
+            
 
         /*
          * Exercise 7.
