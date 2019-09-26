@@ -61,23 +61,41 @@ public class ProblemSet2 {
          */
 
         System.out.print("Enter a dollar amount: ");
-        double amountMoney = in.nextDouble();
+        double amountMoney = in.nextDouble() * 100;
         in.nextLine();
 
-        double dollarValue = 1.00;
-        double quarterValue = .25;
-        double dimeValue = .10;
-        double nickleValue = .05;
+        double dollarValue = 100;
+        double quarterValue = 25;
+        double dimeValue = 10;
+        double nickelValue = 5;
         
         double dollarAmount = Math.floor(amountMoney / dollarValue);
 
         amountMoney = amountMoney - (dollarAmount * dollarValue);
 
+        
+
+        double quarterAmount = Math.floor(amountMoney / quarterValue);
+
+        amountMoney = amountMoney - (quarterAmount * quarterValue);
+
+        
+
+        double dimeAmount = Math.floor(amountMoney / dimeValue);
+
+        amountMoney = amountMoney - (dimeAmount * dimeValue);
+
+
+        double nickelAmount = Math.floor(amountMoney / nickelValue);
+
+        amountMoney = amountMoney - (nickelAmount * nickelValue);
+
+
         System.out.printf("DOLLARS:    %.0f\n", dollarAmount );
-        
-        System.out.println(amountMoney);
-        
-        // in progress
+        System.out.printf("QUARTERS:   %.0f\n", quarterAmount);
+        System.out.printf("DIME:   %.0f\n", dimeAmount);
+        System.out.printf("NICKEL:   %.0f\n", nickelAmount);
+        System.out.printf("PENNIES:   %.0f\n", amountMoney);
 
         /*
          * Exercise 3.
@@ -86,7 +104,42 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
+        
+        System.out.print("Enter a dollar amount: ");
+        double amountMoney = in.nextDouble() * 100;
+        in.nextLine();
 
+        
+        double tenDollarValue = 1000;
+        double fiveDollarValue = 500;
+        double dollarValue = 100;
+        double quarterValue = 25;
+        double dimeValue = 10;
+        double nickelValue = 5;
+
+        double tenDollarAmount = Math.floor(amountMoney / tenDollarValue);
+        amountMoney = amountMoney - (tenDollarAmount * tenDollarValue);
+
+        double fiveDollarAmount = Math.floor(amountMoney / fiveDollarValue);
+        amountMoney = amountMoney - (fiveDollarAmount * fiveDollarValue);
+        
+        double dollarAmount = Math.floor(amountMoney / dollarValue);
+        amountMoney = amountMoney - (dollarAmount * dollarValue);
+
+        double quarterAmount = Math.floor(amountMoney / quarterValue);
+        amountMoney = amountMoney - (quarterAmount * quarterValue);
+
+        double dimeAmount = Math.floor(amountMoney / dimeValue);
+        amountMoney = amountMoney - (dimeAmount * dimeValue);
+
+        double nickelAmount = Math.floor(amountMoney / nickelValue);
+        amountMoney = amountMoney - (nickelAmount * nickelValue);
+
+
+        double bills = tenDollarAmount + fiveDollarAmount + dollarAmount;
+        double coins = quarterAmount + dimeAmount + nickelAmount + amountMoney;
+        System.out.printf("BILLS : %.0f\n", bills );
+        System.out.printf("COINS : %.0f\n", coins);
 
         /*
          * Exercise 4.
@@ -95,6 +148,27 @@ public class ProblemSet2 {
          * and inches.
          */
 
+        System.out.print("Enter a number of inches: ");
+        double amountInches = in.nextDouble() ;
+        in.nextLine();
+  
+        double mileValue = 63360;
+        double yardValue = 36;
+        double feetValue = 12;
+       
+        double mileAmount = Math.floor(amountInches / mileValue);
+        amountInches = amountInches - (mileAmount * mileValue);
+
+        double yardAmount = Math.floor(amountInches / yardValue);
+        amountInches = amountInches - (yardAmount * yardValue);
+
+        double feetAmount = Math.floor(amountInches / feetValue);
+        amountInches = amountInches - (feetAmount * feetValue);
+
+        System.out.printf("MILES  : %.0f\n", mileAmount );
+        System.out.printf("YARDS  : %.0f\n", yardAmount);
+        System.out.printf("FEET   : %.0f\n", feetAmount);
+        System.out.printf("INCHES : %.0f\n", amountInches);
 
         
         /*
