@@ -28,7 +28,7 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
-        System.out.print("Enter your first name: ");
+        System.out.print("\nEnter your first name: ");
         String firstName = in.next();
         in.nextLine();
 
@@ -48,7 +48,7 @@ public class ProblemSet2 {
         String hometown = in.nextLine();
         
 
-        System.out.println("NAME     : " + firstName + " " + lastName);
+        System.out.println("\nNAME     : " + firstName + " " + lastName);
         System.out.println("GRADE    : " + grade);
         System.out.println("AGE      : " + age);
         System.out.println("HOMETOWN : " + hometown+ "\n");
@@ -91,7 +91,7 @@ public class ProblemSet2 {
         amountMoney = amountMoney - (nickelAmount * nickelValue);
 
 
-        System.out.printf("\nDOLLARS  :  %.0f\n", dollarAmount );
+        System.out.printf("\nDOLLARS  : %.0f\n", dollarAmount );
         System.out.printf("QUARTERS : %.0f\n", quarterAmount);
         System.out.printf("DIME     : %.0f\n", dimeAmount);
         System.out.printf("NICKEL   : %.0f\n", nickelAmount);
@@ -206,7 +206,7 @@ public class ProblemSet2 {
         double circleArea = Math.PI * (Math.pow((circleDiameter / 2), 2));
         double circleCircumference = Math.PI * circleDiameter;
         
-        System.out.printf("AREA          : %,.2f\n", circleArea);
+        System.out.printf("\nAREA          : %,.2f\n", circleArea);
         System.out.printf("CIRCUMFERENCE : %,.2f\n\n", circleCircumference);
 
         /*
@@ -259,8 +259,8 @@ public class ProblemSet2 {
          */
         
         System.out.print("Enter a String: ");
-        String original = in.next();
-        in.nextLine();
+        String original = in.nextLine();
+        
 
 
         String substring = original.substring(original.length()/2, original.length());
